@@ -3,4 +3,4 @@ language: ruby
 cache: bundler
 rvm:
   - 2.7.1
-before_install: gem install bundler -v 2.1.4
+before_install: "apt-get install libid3-3.8.3-dev; gem install bundler -v 2.1.4"
