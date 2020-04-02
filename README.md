@@ -7,7 +7,7 @@
 A "*properly formatted file name*" is a filename which is formatted as such:
 
 ```
-<artist> - <album> - <track number> - <title> - <year>.mp3
+<artist> - <album> - <track number> - <title> - <year> - <subtitle>.mp3
 ```
 
 Such a formatting can be obtained, for example, when ripping a CD with `pacpl`
@@ -16,6 +16,8 @@ and the following options
 ```sh
 $ pacpl --rip all --nscheme="%ar - %ab - %tr - %ti - %tr - %yr" [... other options]
 ```
+
+(this doesn't produce a `subtitle` tag, but it can be added by hand later on).
 
 ## Installation
 

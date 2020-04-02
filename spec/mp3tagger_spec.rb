@@ -1,4 +1,5 @@
 RSpec.describe Mp3tagger do
+
   it "has a version number" do
     expect(Mp3tagger::VERSION).not_to be nil
   end

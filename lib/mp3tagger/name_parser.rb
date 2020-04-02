@@ -3,7 +3,7 @@ module Mp3tagger
   class NameParser
   
     attr_reader :filename
-    attr_reader :artist, :album, :track, :title, :year
+    attr_reader :artist, :album, :track, :title, :year, :subtitle
   
     def initialize(name)
       @filename = name
@@ -13,7 +13,8 @@ module Mp3tagger
   private
   
     def parse
-      (@artist, @album, @track, @title, @year, other) = self.filename.split(/\s*-\s*/)
+      stripped_name = self.filename[0..-5] # removing the suffix
+      (@artist, @album, @track, @title, @year, @subtitle, other) = stripped_name.split(/\s*-\s*/)
     end
   
   end
