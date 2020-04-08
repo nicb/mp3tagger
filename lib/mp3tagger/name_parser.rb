@@ -14,7 +14,7 @@ module Mp3tagger
   
     def parse
       stripped_name = self.filename[0..-5] # removing the suffix
-      (@artist, @album, @track, @title, @year, @subtitle, other) = stripped_name.split(/\s*-\s*/)
+      (@track, @album, @artist, @title, @year, @subtitle, other) = stripped_name.split(/\s*-\s*/)
     end
   
   end
